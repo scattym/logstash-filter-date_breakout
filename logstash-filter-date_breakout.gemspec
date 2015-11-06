@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name = 'logstash-filter-date_breakout'
-  s.version         = '0.0.5'
+  s.version         = '0.0.6'
   s.licenses = ['Apache License (2.0)']
   s.summary = "This filter parses a timestamp and breaks it out into fields such as hour of day and day of week."
   s.description = "This gem is a logstash plugin required to be installed on top of the Logstash core pipeline using $LS_HOME/bin/plugin install gemname. This gem is not a stand-alone program"

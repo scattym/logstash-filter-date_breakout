@@ -37,13 +37,13 @@ class LogStash::Filters::DateBreakout < LogStash::Filters::Base
   def filter(event)
     begin
       timestamp = event[@source]
-      event[@prefix + ".year"] = Integer(event[@source].time.strftime("%Y").to_i)
-      event[@prefix + ".monthOfYear"] = Integer(event[@source].time.strftime("%m").to_i)
-      event[@prefix + ".dayOfMonth"] = Integer(event[@source].time.strftime("%d").to_i)
-      event[@prefix + ".weekOfYear"] = Integer(event[@source].time.strftime("%V").to_i)
-      event[@prefix + ".dayOfWeek"] = Integer(event[@source].time.strftime("%w").to_i)
-      event[@prefix + ".dayOfYear"] = Integer(event[@source].time.strftime("%j").to_i)
-      event[@prefix + ".hourOfDay"] = Integer(event[@source].time.strftime("%k").to_i)
+      event[@prefix + ":year"] = Integer(event[@source].time.strftime("%Y").to_i)
+      event[@prefix + ":monthOfYear"] = Integer(event[@source].time.strftime("%m").to_i)
+      event[@prefix + ":dayOfMonth"] = Integer(event[@source].time.strftime("%d").to_i)
+      event[@prefix + ":weekOfYear"] = Integer(event[@source].time.strftime("%V").to_i)
+      event[@prefix + ":dayOfWeek"] = Integer(event[@source].time.strftime("%w").to_i)
+      event[@prefix + ":dayOfYear"] = Integer(event[@source].time.strftime("%j").to_i)
+      event[@prefix + ":hourOfDay"] = Integer(event[@source].time.strftime("%k").to_i)
       #event[@prefix + ".ddMONyy"] = event[@sourch].time.strftime "%-d%^b%y"
 
     rescue Exception => e
